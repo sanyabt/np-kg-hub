@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:ns1="http://purl.obolibrary.org/obo/chebi#"
+   xmlns:obo="http://purl.obolibrary.org/obo/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="Ncc3977ca16054f0eaa98d2dc90ffbece">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_6956"/>
+    <obo:RO_0002449 rdf:nodeID="N2fe43e9046fc4438aad7b83805a31c32"/>
+    <obo:RO_0002449 rdf:nodeID="N59e7586e92de4423ab1de1fff661d82d"/>
+    <obo:RO_0002449 rdf:nodeID="N9a7bd114bf9740a9bbe8c2e4c06b94f7"/>
+    <obo:RO_0002449 rdf:nodeID="Na30b2d721c4947eabc9465a414a70f72"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9fe067150ead4fb6a0b5500badee372b">
+    <rdf:type rdf:resource="http://napdi.org/napdi_srs_imports:camellia_sinensis_whole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/napdi-srs-imports">
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/core.owl"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl"/>
+    <dc:contributor xml:lang="en">Richard D. Boyce</dc:contributor>
+    <dc:creator xml:lang="en">Sanya B. Taneja</dc:creator>
+    <rdfs:label xml:lang="en">NaPDI SRS imported entities</rdfs:label>
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2014-05-03/classes-only.owl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf">
+    <rdfs:subClassOf rdf:nodeID="N75a44384959e4b39afbbfcdaba0f2cb9"/>
+    <rdfs:subClassOf rdf:nodeID="N21aacf94ff6f49f299704da182cc1293"/>
+    <rdfs:subClassOf rdf:nodeID="Nbc33b4a5cd3243778d8d55fb52fd6862"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025131"/>
+    <rdfs:subClassOf rdf:nodeID="N2bab649ed19c4da6b3f146249dd73372"/>
+    <rdfs:subClassOf rdf:nodeID="N78cdd85f3d504ab182100c682203a75b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Camellia_sinensis_leaf</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Ne3a8baf89f6a4a6bb87c67b081f952e8"/>
+    <rdfs:subClassOf rdf:nodeID="N6c0d7e109d55462b9ceafe4ccfec6884"/>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/44cfdb9d-f504-42d8-ab9d-ab6eb8eebe03"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N34bf9d87725348c38f88130aa7b86a15">
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_6956"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_68330">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/515014aa-2dae-464e-9d65-0514f4d6c2f1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb8fda6571bd14bcfa203cb15e66aa077">
+    <obo:RO_0002180 rdf:nodeID="Na7026157a27a4a82806fa4514879789a"/>
+    <obo:RO_0002180 rdf:nodeID="N4deec2b1d9de45568ccc936f52d7992d"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://napdi.org/napdi_srs_imports:camellia_sinensis_leaf"/>
+    <obo:RO_0002180 rdf:nodeID="N51be4b96cdbe415f849350f25996423a"/>
+    <obo:RO_0002180 rdf:nodeID="N01c83ac41336446cb8e31a546dcd0d57"/>
+    <obo:RO_0002180 rdf:nodeID="Nfda1ecd1708b4531abd78aae64ad6b6a"/>
+    <obo:BFO_0000050 rdf:nodeID="N9fe067150ead4fb6a0b5500badee372b"/>
+    <obo:RO_0002180 rdf:nodeID="Ne2bb16783b994e00884ae958da630791"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na7026157a27a4a82806fa4514879789a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <obo:RO_0002449 rdf:nodeID="Nb1cab9dfdd014c7c999b9bf4faa70044"/>
+    <obo:RO_0002449 rdf:nodeID="N8d96f458b95842c48ead10740aab227c"/>
+    <obo:RO_0002449 rdf:nodeID="Ndc39ca940f5a4ef0bf6a37a45716f245"/>
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_90"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://napdi.org/napdi_srs_imports:mitragyna_speciosa">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025131"/>
+    <rdfs:subClassOf rdf:nodeID="Nfc3487b2abb64beeb6f19fa350f4f555"/>
+    <rdfs:label xml:lang="en">Mitragyna_speciosa</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N0ff9f78370654640ab27dd55791cbcc9"/>
+    <rdfs:subClassOf rdf:nodeID="N34bf9d87725348c38f88130aa7b86a15"/>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/dac1ac7a-f1bb-42d7-ab9c-0bf06d0d9825"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne2bb16783b994e00884ae958da630791">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_70255"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://napdi.org/napdi_srs_imports:camellia_sinensis_whole">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025131"/>
+    <rdfs:subClassOf rdf:nodeID="Naf0cb035ab6a48a1b522f47b0be40d9a"/>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/e9698137-24da-46f8-a70e-43e27691491f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Camellia_sinensis_whole</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N51be4b96cdbe415f849350f25996423a">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_68330"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_70253">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/2d9aaf78-36eb-4ce3-a657-830f30512d72"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole">
+    <rdfs:label xml:lang="en">Mitragyna_speciosa_whole</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Ndcd28e065a554d9693da659cbfc4beb8"/>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/d469b67d-e9a6-459f-b209-c59451936336"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025131"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://napdi.org/napdi_srs_imports:epigallocatechin_gallate">
+    <rdfs:label xml:lang="en">(-)-epigallocatechin gallate</rdfs:label>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/60a66f64-7eca-4725-87b6-71bf41829f90"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c0d7e109d55462b9ceafe4ccfec6884">
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23052"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2d46a9744d604997a4c97ba2c1d79026">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <obo:BFO_0000050 rdf:nodeID="N195678b699ef4a42b2f21a0508235936"/>
+    <obo:RO_0002180 rdf:nodeID="Ncc3977ca16054f0eaa98d2dc90ffbece"/>
+    <rdf:type rdf:resource="http://napdi.org/napdi_srs_imports:mitragyna_speciosa"/>
+    <obo:RO_0002180 rdf:nodeID="N9f7dd20447394fac938da686993e16ac"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine">
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/c50748a1-8231-42ad-a263-6abc6bc49005"/>
+    <rdfs:label xml:lang="en">7-hydroxy-mitragynine</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N2ed6f64f99964106a9e5f146090868e9"/>
+    <rdfs:subClassOf rdf:nodeID="N6fb98f5b44064f95bd1b44381c64e421"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2ed6f64f99964106a9e5f146090868e9">
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#has_functional_parent"/>
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_6956"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23052">
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/5e3251fe-d591-4ac6-a8ad-679a3fe17e21"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndcd28e065a554d9693da659cbfc4beb8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_170351"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N21aacf94ff6f49f299704da182cc1293">
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_70255"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfda1ecd1708b4531abd78aae64ad6b6a">
+    <obo:RO_0002449 rdf:nodeID="Nb1cab9dfdd014c7c999b9bf4faa70044"/>
+    <obo:RO_0002449 rdf:nodeID="N8d96f458b95842c48ead10740aab227c"/>
+    <obo:RO_0002449 rdf:nodeID="Ndc39ca940f5a4ef0bf6a37a45716f245"/>
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23052"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4deec2b1d9de45568ccc936f52d7992d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_42255"/>
+    <obo:RO_0002449 rdf:nodeID="Nb1cab9dfdd014c7c999b9bf4faa70044"/>
+    <obo:RO_0002449 rdf:nodeID="N8d96f458b95842c48ead10740aab227c"/>
+    <obo:RO_0002449 rdf:nodeID="Ndc39ca940f5a4ef0bf6a37a45716f245"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N01c83ac41336446cb8e31a546dcd0d57">
+    <rdf:type rdf:resource="http://napdi.org/napdi_srs_imports:epigallocatechin_gallate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_90">
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/261f2b07-471b-45d6-b1fc-28b65defbe21"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N75a44384959e4b39afbbfcdaba0f2cb9">
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_42255"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_70255">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/5be035c0-63da-4bd6-8ffb-e5dafdc3b3b0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naf0cb035ab6a48a1b522f47b0be40d9a">
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4442"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2bab649ed19c4da6b3f146249dd73372">
+    <owl:someValuesFrom rdf:resource="http://napdi.org/napdi_srs_imports:epigallocatechin_gallate"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2fe43e9046fc4438aad7b83805a31c32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PR_P000001891"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbc33b4a5cd3243778d8d55fb52fd6862">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    <owl:someValuesFrom rdf:resource="http://napdi.org/napdi_srs_imports:camellia_sinensis_whole"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9a7bd114bf9740a9bbe8c2e4c06b94f7">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PR_P08684"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfcd2ea83fc474742ba95e8d1b9793c00">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/CHEBI_70253"/>
+    <ns1:has_functional_parent rdf:nodeID="N4deec2b1d9de45568ccc936f52d7992d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_42255">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/53d98e02-cd90-4b89-bf72-e31dc1392811"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfc3487b2abb64beeb6f19fa350f4f555">
+    <owl:someValuesFrom rdf:resource="http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_6956">
+    <obo:database_cross_reference rdf:resource="http://gsrs.ncats.nih.gov/ginas/app/substance/22e5b710-9260-4678-9196-ba75d4c38520"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0ff9f78370654640ab27dd55791cbcc9">
+    <owl:someValuesFrom rdf:resource="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9f7dd20447394fac938da686993e16ac">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ns1:has_functional_parent rdf:nodeID="Ncc3977ca16054f0eaa98d2dc90ffbece"/>
+    <obo:RO_0002449 rdf:nodeID="N9a7bd114bf9740a9bbe8c2e4c06b94f7"/>
+    <rdf:type rdf:resource="http://napdi.org/napdi_srs_imports:7_hydroxy_mitragynine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne3a8baf89f6a4a6bb87c67b081f952e8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_68330"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N195678b699ef4a42b2f21a0508235936">
+    <rdf:type rdf:resource="http://napdi.org/napdi_srs_imports:mitragyna_speciosa_whole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na30b2d721c4947eabc9465a414a70f72">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PR_P11712"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N78cdd85f3d504ab182100c682203a75b">
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_90"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6fb98f5b44064f95bd1b44381c64e421">
+    <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25212"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8d96f458b95842c48ead10740aab227c">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PR_Q9HAW8"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndc39ca940f5a4ef0bf6a37a45716f245">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PR_Q9HAW9"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N59e7586e92de4423ab1de1fff661d82d">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PR_P10635"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb1cab9dfdd014c7c999b9bf4faa70044">
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/PR_P22309"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+</rdf:RDF>

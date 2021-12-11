@@ -1,13 +1,11 @@
-NaPDI-KG
+Download-Transform-Merge Template
 ================================================
-Knowledge Graph Framework to Generate Hypotheses for Natural Product-Drug Interactions
-
-![KG-Framewor](images/graphical_abstract.png)
+KG hub template for tools to generate knowledge graphs for projects
 
 Documentation
 ------------------------------------------------
 
-NaPDI-KG is a knowledge graph framework to identify and generate mechanistic hypotheses for pharmacokinetic natural product-drug interactions (NPDIs). This repository has been forked from the [Knowledge-Graph-Hub](https://github.com/Knowledge-Graph-Hub). NaPDI-KG uses the [PheKnowLator ecosystem](https://github.com/callahantiff/PheKnowLator) to create the ontology-grounded KG. It includes the following components -
+This template could be used for data ingestion for varied sources.
 
 **Components**
 
@@ -33,4 +31,6 @@ Thes examples have download links and transform codes from other projects.
 
 The [merge.yaml](merge.yaml) shows merging of the various KGs. In this example we have ENVO, CHEBI, NCBITaxon and the Traits KGs merged.
 
-Original KG-Hub documentation - https://github.com/sanyabt/napdi-kg/blob/master/README-KG-Hub.md
+**Implementation**
+
+[Use this template](https://github.com/Knowledge-Graph-Hub/kg-dtm-template/generate) to generate a template in the desired repository and then refactor the string `project_name` in the project to the desired project name. 

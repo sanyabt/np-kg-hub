@@ -4,6 +4,7 @@ import pandas as pd
 import subprocess
 from nltk import tokenize
 import requests
+import time
 
 '''
 make sure MetaMap, WordSenseDisambiguation Server, and SemRep are running - see notes for start and stop commands
@@ -13,7 +14,7 @@ workingDir = os.getcwd()
 log_dir = workingDir + '/logs/'
 utf_path = '/home/sanya/npdi-workspace/machine_read/replace_utf8.jar'
 
-np = ['greentea', 'kratom']
+np = ['greentea']
 
 logging = True
 
@@ -27,8 +28,8 @@ count_dict = {
 			'n_files_processed': 0
 			}
 
-start_pmid = sys.argv[1]
-end_pmid = sys.argv[2]
+start_pmid = int(sys.argv[1])
+end_pmid = int(sys.argv[2])
 
 pub_year_to_pmid_map = {}
 
@@ -145,12 +146,12 @@ if __name__ == '__main__':
 		log_file = open(log_dir+item + 'semrep_log'+str(t0)+'.txt', 'a')
 		log_file.write('Log for '+ item)
 		
-		with open(file_i, 'r') as file_input:
+		with open(inputPMID_file, 'r') as file_input:
 			pmids = file_input.readlines()
 
 		text_files = os.listdir(inputDirRaw)
 		
-		for lineno in range(start_pmid, end_pmid):
+		for line_no in range(start_pmid, end_pmid):
 			pmid = pmids[line_no].strip()
 			count_dict['n_total_pmid'] += 1
 			file = str(pmid) + '_processed.txt' 

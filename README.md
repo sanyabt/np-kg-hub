@@ -2,35 +2,47 @@ NaPDI-KG
 ================================================
 **Knowledge Graph Framework to Generate Hypotheses for Natural Product-Drug Interactions**
 
-![KG-Framewor](images/graphical_abstract.png)
+![KG-Framework](images/graphical_abstract.png)
 
 Documentation
 ------------------------------------------------
 
 NaPDI-KG is a knowledge graph framework to identify and generate mechanistic hypotheses for pharmacokinetic natural product-drug interactions (NPDIs). This repository has been forked from the [Knowledge-Graph-Hub](https://github.com/Knowledge-Graph-Hub). NaPDI-KG uses the [PheKnowLator ecosystem](https://github.com/callahantiff/PheKnowLator) to create the ontology-grounded KG. It includes the following components -
 
-**Components**
+1. Biomedical Ontologies
 
-- Download: The [download.yaml](download.yaml) contains all the URLs for the source data.
-- Transform: The [transform_utils](project_name/transform_utils) contains the code relevant to trnsformations of the raw data into nodes and edges (tsv format)
-- Merge: Implementation of the 'merge' function from [KGX](https://github.com/biolink/kgx) using [merge.yaml](merge.yaml) as a source file.
+2. Ontology Extensions for Natural Products
 
-**Utilities**
+3. Machine Reading
 
-The code for these are found in the [utils](project_name/utils) folder.
+4. Linked Open Data
 
-- NLP using [OGER](https://github.com/OntoGene/OGER)
-- [ROBOT](https://github.com/ontodev/robot) for transforming ontology.OWL to ontology.JSON
+Notes about PheKnowLator workflow
+------------------------------------------------
 
-**Examples Included**
+This repository only contains the reference Jupyter notebooks used to run the [PheKnowLator](https://github.com/callahantiff/PheKnowLator) workflow. For complete details on semantic integration of OBO ontologies and biomedical data sources in NaPDI-KG as well as latest versions of Jupyter notebooks run as part of the PheKnowLator workflow, refer to this [fork of the PheKnowLator repository](https://github.com/sanyabt/PheKnowLator/tree/pheknowlator-sbt).
 
-Thes examples have download links and transform codes from other projects.
+Other Links
+------------------------------------------------
 
-- Drug Central: Sampled from [kg-covid-19](https://github.com/Knowledge-Graph-Hub/kg-covid-19). Code located [here](project_name/transform_utils/drug_central)
-- Ontology: Sampled from [kg-covid-19](https://github.com/Knowledge-Graph-Hub/kg-covid-19). Code located [here](project_name/transform_utils/ontology)
-- Traits: Sampled from [kg-microbe](https://github.com/Knowledge-Graph-Hub/kg-microbe). Code located [here](project_name/transform_utils/traits)
-- Example Transform: Boilerplate code for transforms. Code located [here](project_name/example_transform).
+* Find the original KG-Hub documentation [here](https://github.com/sanyabt/napdi-kg/blob/master/README-KG-Hub.md).
+* [Recorded talk](https://pitt.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a65ba3b6-3680-4b1f-ac34-adf301405b94) presenting NaPDI-KG at the Pittsburgh-CMU Medical Informatics Colloquium (PCMIC).
 
-The [merge.yaml](merge.yaml) shows merging of the various KGs. In this example we have ENVO, CHEBI, NCBITaxon and the Traits KGs merged.
+Get In Touch
+------------------------------------------------
 
-Find the original KG-Hub documentation [here](https://github.com/sanyabt/napdi-kg/blob/master/README-KG-Hub.md).
+Get in touch at <sbt12@pitt.edu>!
+
+
+Citations
+------------------------------------------------
+
+**AMIA Informatics Summit poster**
+
+Taneja SB, Ndungu PW, Paine MF, Kane-Gill SL, Boyce RD. Relation Extraction from Biomedical Literature on Pharmacokinetic Natural Product-Drug Interactions. Poster presentation, AMIA Informatics Summit 2022; March 21-24, 2022.
+
+**ISMB Conference Abstract and Related Files**
+
+Taneja SB, Callahan TJ, Brochhausen M, Paine MF, Kane-Gill SL, Boyce RD. Designing potential extensions from G-SRS to ChEBI to identify natural product-drug interactions. Intelligent Systems for Molecular Biology/European Conference on Computational Biology (ISMB/ECCB), 2021. [https://doi.org/10.5281/zenodo.5736386](https://doi.org/10.5281/zenodo.5736386)
+
+This work is supported by the National Institutes of Health National Center for Complementary and Integrative Health Grant U54 AT008909.

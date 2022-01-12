@@ -22,11 +22,11 @@
 #
 # Drug Central
 #
--
+#-
   # drug - target interactions from Drug Central
-  url: http://unmtid-shinyapps.net/download/drug.target.interaction.tsv.gz
-  local_name: drug.target.interaction.tsv.gz
-s
+#  url: http://unmtid-shinyapps.net/download/drug.target.interaction.tsv.gz
+#  local_name: drug.target.interaction.tsv.gz
+
 # #
 # # Most of the data is extracted from the 'bacteria-archaea-traits' github repository
 # # link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/tree/master/output
@@ -35,26 +35,26 @@ s
 # Condensed-species
 # - GTDB
 #   link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_species_GTDB.csv
--
+#-
   #url: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_species_GTDB.csv?raw=true
   #local_name: condensed_species_GTDB.csv
 # - NCBI
 #   link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_species_NCBI.csv
--
+#-
   #url: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_species_NCBI.csv?raw=true
   #local_name: condensed_species_NCBI.csv
 
 # Condensed-traits
 # - GTDB
 #   link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_traits_GTDB.csv
--
+#-
   #url: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_traits_GTDB.csv?raw=true
   #local_name: condensed_traits_GTDB.csv
 # - NCBI
 #   link: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/tree/master/output
--
-  url: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_traits_NCBI.csv?raw=true
-  local_name: condensed_traits_NCBI.csv
+#-
+#  url: https://github.com/bacteria-archaea-traits/bacteria-archaea-traits/blob/master/output/condensed_traits_NCBI.csv?raw=true
+#  local_name: condensed_traits_NCBI.csv
 
 #
 # #**** ROBOT ****
@@ -70,17 +70,17 @@ s
 #
 # Environment
 #
--
-  url: https://raw.githubusercontent.com/bacteria-archaea-traits/bacteria-archaea-traits/master/data/conversion_tables/environments.csv
-  local_name: environments.csv
+#-
+#  url: https://raw.githubusercontent.com/bacteria-archaea-traits/bacteria-archaea-traits/master/data/conversion_tables/environments.csv
+#  local_name: environments.csv
 
 # #**** Ontology files****
 #
 # ENVO
 #
--
-  url: http://purl.obolibrary.org/obo/envo.json
-  local_name: envo.json
+#-
+#  url: http://purl.obolibrary.org/obo/envo.json
+#  local_name: envo.json
 #
 # CHEBI
 #
@@ -93,3 +93,39 @@ s
 #-
 #  url: http://purl.obolibrary.org/obo/ncbitaxon.owl
 #  local_name: ncbitaxon.owl
+
+# New sources added 2021-12-11
+# do these have to be URLs?
+# PheKnowLator graph - local version with extended workflow (includes other data sources and ontologies)
+-
+  url: /home/sanya/PheKnowLatorv2/resources/knowledge_graphs/PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle
+  local_name: pheknowlator
+#
+# Ontology Extensions - ChEBI lite ontology merged with ontology extensions
+-
+  url: /home/sanya/napdi-kg/ontology-extensions/chebi-merged-20210629.owl
+  local: chebi-merged
+
+#
+# Machine Reading Graphs
+# Green Tea
+-
+  url: /home/sanya/napdi-kg/machine-read/greentea_pmid_all_predicates_umls.tsv
+  local: greentea-reach
+-
+  url: /home/sanya/napdi-kg/machine-read/greentea_pmid_all_predicates_semrep.tsv
+  local: greentea-semrep
+
+# Kratom
+-
+  url: /home/sanya/napdi-kg/machine-read/kratom_pmid_all_predicates_umls.tsv
+  local: kratom-reach
+-
+  url: /home/sanya/napdi-kg/machine-read/kratom_pmid_all_predicates_semrep.tsv
+  local: kratom-semrep
+
+# Microbiome
+-
+  url: /home/sanya/napdi-kg/machine-read/microbiome_pmid_all_predicates_semrep.tsv
+  local: microbiome-semrep
+

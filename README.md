@@ -1,6 +1,6 @@
 NaPDI-KG
 ================================================
-Knowledge Graph Framework to Generate Hypotheses for Natural Product-Drug Interactions
+**Knowledge Graph Framework to Generate Hypotheses for Natural Product-Drug Interactions**
 
 ![KG-Framewor](images/graphical_abstract.png)
 
@@ -33,4 +33,4 @@ Thes examples have download links and transform codes from other projects.
 
 The [merge.yaml](merge.yaml) shows merging of the various KGs. In this example we have ENVO, CHEBI, NCBITaxon and the Traits KGs merged.
 
-Original KG-Hub documentation - https://github.com/sanyabt/napdi-kg/blob/master/README-KG-Hub.md
+Find the original KG-Hub documentation [here](https://github.com/sanyabt/napdi-kg/blob/master/README-KG-Hub.md).

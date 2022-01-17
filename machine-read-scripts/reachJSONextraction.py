@@ -16,7 +16,7 @@ workingDir = os.getcwd()
 reachDir = workingDir + '/output_files/'
 reach_file = sys.argv[1]
 logDir = workingDir + '/logs/'
-outputDir = reachDir + 'kratom/'
+outputDir = reachDir + 'greentea/'
 file_umls = workingDir + '/output_files/umls_dict_20211004.pickle'
 save_umls = True
 logging = True
@@ -27,13 +27,14 @@ count_dict = {
 	'n_entities_total': 0,
 	'n_entities_mapped': 0
 }
-assemble = False
+assemble = True
 pub_year_to_pmid_map = {}
 
 '''
 Steps to be modified based on use case and required output and processing
 '''
-#Also figure out how to include heuristics in map_grounding: https://indra.readthedocs.io/en/latest/modules/tools/index.html?highlight=run_preassembly#indra.tools.assemble_corpus.map_grounding
+#Also figure out how to include heuristics in map_grounding: 
+#https://indra.readthedocs.io/en/latest/modules/tools/index.html?highlight=run_preassembly#indra.tools.assemble_corpus.map_grounding
 def run_assembly_pipeline(statements):
 	#statements = ac.filter_grounded_only(statements)  # Filter out ungrounded agents
 	statements = ac.filter_no_hypothesis(statements)  # Filter out hypothetical statements
@@ -307,7 +308,7 @@ if __name__ == '__main__':
 		reach_dict = extract_statements(outJSONFname, umls_dict)
 
 	reach_result = pd.DataFrame(data=reach_dict)
-	reach_result.to_csv(outputDir+'kratom_pmid_all_predicates_umls.tsv', sep='\t', index=False,
+	reach_result.to_csv(outputDir+'greentea_pmid_all_predicates_umls_20220112.tsv', sep='\t', index=False,
 					columns=['seq', 'pmid', 'subject_cui', 'subject_name', 'subject_type', 'subject_source', 'subj_map_reach',
 					'predicate', 'object_source', 'object_cui', 'object_name', 'object_type', 'obj_map_reach', 'belief',
 					'sentence', 'year', 'subject_score', 'object_score', 'umls_flag', 'subj_reach_grounding', 'obj_reach_grounding'])

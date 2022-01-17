@@ -97,14 +97,14 @@
 # New sources added 2021-12-11
 # do these have to be URLs?
 # PheKnowLator graph - local version with extended workflow (includes other data sources and ontologies)
--
-  url: /home/sanya/PheKnowLatorv2/resources/knowledge_graphs/PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle
-  local_name: pheknowlator
+#-
+#  url: /home/sanya/PheKnowLatorv2/resources/knowledge_graphs/PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle
+#  local_name: pheknowlator
 #
 # Ontology Extensions - ChEBI lite ontology merged with ontology extensions
--
-  url: /home/sanya/napdi-kg/ontology-extensions/chebi-merged-20210629.owl
-  local: chebi-merged
+#-
+#  url: /home/sanya/napdi-kg/ontology-extensions/chebi-merged-20210629.owl
+#  local: chebi-merged
 
 #
 # Machine Reading Graphs

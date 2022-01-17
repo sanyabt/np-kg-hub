@@ -5,6 +5,8 @@ import subprocess
 from nltk import tokenize
 import requests
 import time
+from pdf_to_text import read_PDF_file, process_PDF_file
+import logging
 
 '''
 make sure MetaMap, WordSenseDisambiguation Server, and SemRep are running - see notes for start and stop commands
@@ -14,9 +16,7 @@ workingDir = os.getcwd()
 log_dir = workingDir + '/logs/'
 utf_path = '/home/sanya/npdi-workspace/machine_read/replace_utf8.jar'
 
-np = ['greentea']
-
-logging = True
+np = ['microbiome']
 
 extraction = True
 
@@ -43,8 +43,11 @@ def read_and_write_file(file, filepath_in, filepath_out):
 		sentences = tokenize.sent_tokenize(result)
 		fileo = open(fileascii, 'w', encoding='ascii', errors='backslashreplace')
 		for item in sentences:
-			if sentences.index(item) % 10 == 0:
+			if sentences.index(item) % 5 == 0:
 				fileo.write('\n\n')
+			if len(item) > 1000:
+				fileo.write('\n\n')
+				#continue
 			fileo.write(str(item))
 		fileo.write('\n')
 		fileo.close()
@@ -55,15 +58,12 @@ def read_and_write_file(file, filepath_in, filepath_out):
 
 def process_with_semrep(infile, outfile):
 	try:
-		result = subprocess.run(['/usr/local/bin/semrep.v1.8', '-L', '2018', '-Z', '2018AA', infile, outfile])
+		result = subprocess.run(['/usr/local/bin/semrep.v1.8', '-L', '2018', '-Z', '2018AA', infile, outfile], check=True, timeout=1800)
+
 		return result
 	except Exception as e:
-		print(e)
-		try:
-			result = subprocess.run(['/usr/local/bin/semrep.v1.8', '-L', '2018', '-Z', '2018AA', '-Q', '0', infile, outfile])
-		except Exception as e:
-			print(e)
-			return None
+		logging.info('SemRep error in processing %s', str(e))
+		return None
 
 def get_publication_year(pmid):
 	if pmid == '':
@@ -143,8 +143,11 @@ if __name__ == '__main__':
 		outputDir = workingDir + '/output_files/'+item+'/semrepOutput/'
 		
 		t0=datetime.now()
-		log_file = open(log_dir+item + 'semrep_log'+str(t0)+'.txt', 'a')
-		log_file.write('Log for '+ item)
+		
+		log_file = log_dir+item + '_semrep_log'+str(t0)+'.txt'
+		logging.basicConfig(filename=log_file, filemode='a', level=logging.INFO)
+		logging.info('Log for %s. PMIDS: %s to %s', item, str(start_pmid), str(end_pmid))
+		
 		
 		with open(inputPMID_file, 'r') as file_input:
 			pmids = file_input.readlines()
@@ -153,6 +156,7 @@ if __name__ == '__main__':
 		
 		for line_no in range(start_pmid, end_pmid):
 			pmid = pmids[line_no].strip()
+			logging.info('\n\nProcessing PMID: %s', pmid)
 			count_dict['n_total_pmid'] += 1
 			file = str(pmid) + '_processed.txt' 
 			file_alternate = str(pmid) + '.txt'
@@ -165,16 +169,18 @@ if __name__ == '__main__':
 				if filename is not None:
 					semrep_process = process_with_semrep(filename, outputDir+file.split('_')[0]+'.txt')
 					if semrep_process is not None:
-						log_file.write('File processed: '+file)
+						logging.info('\nFile processed: %s', file)
 						count_dict['n_success'] += 1 
 
 					else:
-						log_file.write('\nError in processing: '+file)
+						logging.info('\nError in processing: %s',file)
 						count_dict['n_error'] += 1
 				else:
-					log_file.write('\nText unavailable: '+file)
+					logging.info('\nText unavailable: %s',file)
 					count_dict['n_error'] +=1
-		
+					#add code for PDF to text if PDF available in input PDF folder - input_files/FullTextPDFs/
+			else:
+				logging.info('\nFile unavailable: %s', file)
 
 		if extraction:
 			result_dict = semrep_extract(outputDir)
@@ -182,16 +188,20 @@ if __name__ == '__main__':
 		semrep_result = pd.DataFrame(result_dict)
 		semrep_result_unique = semrep_result.drop_duplicates(subset=['subject_cui', 'subject_name', 'subject_type',
 					'relation', 'object_cui', 'object_name', 'object_type', 'year', 'sentence'])
-		semrep_result_unique.to_csv(workingDir+'/output_files/'+item+'/greentea_test_pmid_all_predicates_semrep.tsv', sep='\t', index=False,
+		semrep_result_unique.to_csv(workingDir+'/output_files/'+item+'/microbiome_pmid_all_predicates_semrep-'+str(start_pmid)+'-'+str(end_pmid)+'.tsv', sep='\t', index=False,
 					columns=['index', 'pmid', 'subject_cui', 'subject_name', 'subject_type',
 					'relation', 'object_cui', 'object_name', 'object_type', 'year', 'sentence'])
 
 		t1 = datetime.now()
 		seconds=timedelta.total_seconds(t1-t0)
-		log_file.write('\nTotal time: '+ str(seconds)+' seconds')
-		log_file.write('\nPMIDs: '+str(start_pmid)+' to '+str(end_pmid-1))
-		log_file.write('\nTotal PMIDs: '+str(count_dict['n_total_pmid']))
-		log_file.write('\nN_file_hits: '+str(count_dict['n_files_processed']))
-		log_file.write('\nN_semrep_hits: '+str(count_dict['n_success']))
-		log_file.write('\nN_errors: '+str(count_dict['n_error']))
-		log_file.write('\nN_statements: '+str(count_dict['n_statements']))
+		logging.info('\nTotal time: %s seconds', str(seconds))
+		logging.info('\nPMIDs: %s to %s', str(start_pmid), str(end_pmid-1))
+		logging.info('\nTotal PMIDs: %s',str(count_dict['n_total_pmid']))
+		logging.info('\nN_file_hits: %s',str(count_dict['n_files_processed']))
+		logging.info('\nN_semrep_hits: %s',str(count_dict['n_success']))
+		logging.info('\nN_errors: %s',str(count_dict['n_error']))
+		logging.info('\nN_statements: %s',str(count_dict['n_statements']))
+
+		os.system("pkill semrep")
+
+		logging.info('\nTerminated subprocesses')

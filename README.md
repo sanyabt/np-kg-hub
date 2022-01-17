@@ -7,13 +7,13 @@ NaPDI-KG
 Documentation
 ------------------------------------------------
 
-NaPDI-KG is a knowledge graph framework to identify and generate mechanistic hypotheses for pharmacokinetic natural product-drug interactions (NPDIs). This repository has been forked from the [Knowledge-Graph-Hub](https://github.com/Knowledge-Graph-Hub). NaPDI-KG uses the [PheKnowLator ecosystem](https://github.com/callahantiff/PheKnowLator) to create the ontology-grounded KG. It includes the following components -
+NaPDI-KG is a knowledge graph framework to identify and generate mechanistic hypotheses for pharmacokinetic natural product-drug interactions (NPDIs). This repository has been forked from the [Knowledge-Graph-Hub](https://github.com/Knowledge-Graph-Hub). NaPDI-KG uses the [PheKnowLator ecosystem](https://github.com/callahantiff/PheKnowLator) to create the ontology-grounded KG and the KG-Hub ecosystem to integrate the nodes and edges extracted from natural product-related biomedical literature. NaPDI-KG includes the following components -
 
 1. Biomedical Ontologies
 
 2. Ontology Extensions for Natural Products
 
-3. Machine Reading
+3. Biomedical Literature
 
 4. Linked Open Data
 
@@ -25,13 +25,13 @@ This repository only contains the reference Jupyter notebooks used to run the [P
 Other Links
 ------------------------------------------------
 
-* Find the original KG-Hub documentation [here](https://github.com/sanyabt/napdi-kg/blob/master/README-KG-Hub.md).
-* [Recorded talk](https://pitt.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a65ba3b6-3680-4b1f-ac34-adf301405b94) presenting NaPDI-KG at the Pittsburgh-CMU Medical Informatics Colloquium (PCMIC).
+* KG-Hub documentation [here](https://github.com/sanyabt/napdi-kg/blob/master/README-KG-Hub.md).
+* [Recorded talk](https://pitt.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a65ba3b6-3680-4b1f-ac34-adf301405b94) presenting NaPDI-KG at the Pittsburgh-CMU Medical Informatics Colloquium (PCMIC) in December 2021.
 
 Get In Touch
 ------------------------------------------------
 
-Get in touch at <sbt12@pitt.edu>!
+Get in touch through GitHub issues, discussion, or [email](mailto:sbt12@pitt.edu)!
 
 
 Citations

@@ -3,25 +3,24 @@
 import logging
 from typing import List
 
-from project_name.transform_utils.drug_central.drug_central import DrugCentralTransform
-from project_name.transform_utils.ontology import OntologyTransform
-from project_name.transform_utils.ontology.ontology_transform import ONTOLOGIES
-from project_name.transform_utils.traits.traits import TraitsTransform
-
+#from napdi_kg.transform_utils.drug_central.drug_central import DrugCentralTransform
+from napdi_kg.transform_utils.ontology import OntologyTransform
+from napdi_kg.transform_utils.ontology.ontology_transform import ONTOLOGIES
+from napdi_kg.transform_utils.indra.indra_transform import INDRATransform
+from napdi_kg.transform_utils.semrep.semrep_transform import SemRepTransform
 
 DATA_SOURCES = {
-    'DrugCentralTransform': DrugCentralTransform,
-    #'GoTransform': OntologyTransform,
-    #'HpTransform': OntologyTransform,
     'NCBITransform': OntologyTransform,
-    'ChebiTransform': OntologyTransform,
-    'EnvoTransform' : OntologyTransform,
-    'TraitsTransform': TraitsTransform
+    'Greentea_SemRep_Transform': SemRepTransform,
+    'Greentea_INDRA_Transform': INDRATransform,
+    'Kratom_SemRep_Transform': SemRepTransform,
+    'Kratom_INDRA_Transform': INDRATransform
+    'Microbiome_SemRep_Transform': SemRepTransform
 }
 
 
 def transform(input_dir: str, output_dir: str, sources: List[str] = None) -> None:
-    """Call scripts in project_name/transform/[source name]/ to transform each source into a graph format that
+    """Call scripts in napdi_kg/transform/[source name]/ to transform each source into a graph format that
     KGX can ingest directly, in either TSV or JSON format:
     https://github.com/NCATS-Tangerine/kgx/blob/master/data-preparation.md
 

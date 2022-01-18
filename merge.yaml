@@ -18,7 +18,7 @@ merged_graph:
   source:
     bacteria-archaea-traits-ncbi:
       input:
-        name: "bacteria-archaea-traits-ncbi"
+        name: "greentea"
         format: tsv
         filename:
         - data/transformed/condensed_traits_NCBI/nodes.tsv
@@ -33,7 +33,7 @@ merged_graph:
  
     envo-ontology:
       input:
-        name: "ENVO Ontology"
+        name: "kratom"
         format: tsv
         filename:
           - data/transformed/ontologies/envo_nodes.tsv
@@ -41,7 +41,7 @@ merged_graph:
     
     chebi-ontology:
       input:
-        name: "CheBI Ontology"
+        name: "microbiome"
         format: tsv
         filename:
           - data/transformed/ontologies/chebi_nodes.tsv

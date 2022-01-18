@@ -90,42 +90,40 @@
 #
 # NCBI Taxon
 #
-#-
-#  url: http://purl.obolibrary.org/obo/ncbitaxon.owl
-#  local_name: ncbitaxon.owl
+-
+  url: http://purl.obolibrary.org/obo/ncbitaxon.owl
+  local_name: ncbitaxon.owl
 
-# New sources added 2021-12-11
+# New sources added 2022-01-18
 # do these have to be URLs?
 # PheKnowLator graph - local version with extended workflow (includes other data sources and ontologies)
 #-
 #  url: /home/sanya/PheKnowLatorv2/resources/knowledge_graphs/PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle
 #  local_name: pheknowlator
 #
-# Ontology Extensions - ChEBI lite ontology merged with ontology extensions
-#-
-#  url: /home/sanya/napdi-kg/ontology-extensions/chebi-merged-20210629.owl
-#  local: chebi-merged
-
-#
 # Machine Reading Graphs
-# Green Tea
+# Green Tea-INDRA
 -
-  url: /home/sanya/napdi-kg/machine-read/greentea_pmid_all_predicates_umls.tsv
-  local: greentea-reach
+  url: /home/sanya/napdi-kg/data/machine-read/greentea/greentea_pmid_all_predicates_reach.tsv
+  local: greentea-indra
+
+# Green Tea-SemRep
 -
-  url: /home/sanya/napdi-kg/machine-read/greentea_pmid_all_predicates_semrep.tsv
+  url: /home/sanya/napdi-kg/data/machine-read/greentea/greentea_test_pmid_all_predicates_semrep.tsv
   local: greentea-semrep
 
-# Kratom
+# Kratom-INDRA
 -
-  url: /home/sanya/napdi-kg/machine-read/kratom_pmid_all_predicates_umls.tsv
-  local: kratom-reach
+  url: /home/sanya/napdi-kg/data/machine-read/kratom/kratom_pmid_all_predicates_reach.tsv
+  local: kratom-indra
+
+# Kratom-SemRep
 -
-  url: /home/sanya/napdi-kg/machine-read/kratom_pmid_all_predicates_semrep.tsv
+  url: /home/sanya/napdi-kg/data/machine-read/kratom/kratom_pmid_all_predicates_semrep-0-59.tsv
   local: kratom-semrep
 
 # Microbiome
 -
-  url: /home/sanya/napdi-kg/machine-read/microbiome_pmid_all_predicates_semrep.tsv
+  url: /home/sanya/napdi-kg/data/machine-read/microbiome/microbiome_pmid_all_predicates_semrep-0-195.tsv
   local: microbiome-semrep
 

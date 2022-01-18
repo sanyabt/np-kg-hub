@@ -7,8 +7,8 @@ from setuptools import find_packages, setup
 here = os.path.abspath(os.path.dirname(__file__))
 
 # get the long description from the relevant file
-with copen(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
-    long_description = f.read()
+'''with copen(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
+    long_description = f.read()'''
 
 
 def read(*parts):
@@ -40,13 +40,13 @@ extras = {
 }
 
 setup(
-    name='project_name',
+    name='napdi-kg',
     version=__version__,
-    description='KG hub for project_name',
-    long_description=long_description,
-    url='https://github.com/Knowledge-Graph-Hub/project_name',
-    author='Harshad Hegde',
-    author_email='hhegde@lbl.gov',
+    description='KG hub for NaPDI-KG',
+    long_description='NaPDI-KG: Knowledge Graph Framework to Generate Hypotheses for Natural Product-Drug Interactions',
+    url='https://github.com/sanyabt/napdi-kg',
+    author='Sanya Bathla Taneja',
+    author_email='sbt12@pitt.edu',
     python_requires='>=3.7',
 
     # choose your license
